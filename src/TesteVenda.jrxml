@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TesteVenda" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c4fb051d-d8e2-477a-8ba9-9244755f33a1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="dia2" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from venda where Date(Data) = $P{dia2};]]>
+	</queryString>
+	<field name="id_Venda" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="VRecebido" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="VPago" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Trocos" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Data" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Desconto" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Iva" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Plastico" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Group1"/>
+	<group name="Group2"/>
+	<group name="Group3"/>
+	<group name="Group4"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="94">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="114" backcolor="#006699" uuid="44e08134-64ac-4eb5-8dc5-8f00d6ac00e6"/>
+				<staticText>
+					<reportElement x="20" y="73" width="119" height="20" forecolor="#FFFFFF" uuid="3dfdb687-21d5-4d5b-a347-f77a923ad535"/>
+					<text><![CDATA[Antonio Cua Junior]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="10" width="462" height="43" forecolor="#FFFFFF" uuid="28c7b608-7bae-4f98-a010-1319d21bbdf1"/>
+					<textElement>
+						<font size="32" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Relatório Vendas Efectuadas]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="53" width="167" height="20" forecolor="#FFFFFF" uuid="9a33f3f2-3f51-4ed6-9027-86633931f41e"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Sistema de Gestão de stock]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="10"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="58">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="220" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8c4cd9fc-ce51-470f-bb1c-463a9f16bfeb"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Apresentação do Relatório]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="10e93ebb-60b2-41f8-b146-c451f7f254e7"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="71" y="33" width="96" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="41047aeb-7785-497e-845b-87fff17a2af0"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Iva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="476" y="33" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8faabdc7-b393-411f-9674-7efca2ce7130"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Trocos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="167" y="33" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="5db40748-1c4a-48f0-bdce-1edae0d99d14"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Desconto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="33" width="71" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f0f04fb1-dbfa-4bb8-b0f0-3650e47177ef"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ Código ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="259" y="33" width="113" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b26faf49-8780-4bfa-a668-d23d426a7036"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Valor Recebido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="372" y="33" width="104" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="74bf27ce-b624-4651-9310-30a363a597c2"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="11" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Valor Pago]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25">
+			<textField isStretchWithOverflow="true">
+				<reportElement x="476" y="0" width="79" height="20" uuid="9abd81fb-bc42-48e8-b6d4-81ac50eaf580"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Trocos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="0" width="61" height="20" uuid="91396793-c5ad-4805-9139-e58a2417fe75"/>
+				<textFieldExpression><![CDATA[$F{id_Venda}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="167" y="0" width="92" height="20" uuid="37c20f93-b90c-42c1-9037-8d617da269fd"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Desconto}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="372" y="0" width="104" height="20" uuid="cbf01790-cecc-46a3-967a-e07bbb1ba980"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VPago}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="259" y="0" width="113" height="20" uuid="ffa9c8db-08f9-4223-93d0-8c319b9668fe"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VRecebido}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="71" y="0" width="96" height="20" uuid="75d4ca6b-10fd-4918-ba18-16c47f7516fa"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Iva}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="20045d1b-a649-4ea8-a720-f78a324b7751"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="a5233f78-4f56-4526-b122-76c670cda4f3"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="84bbe2f0-50df-42f4-be51-153de7fbbd41"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
